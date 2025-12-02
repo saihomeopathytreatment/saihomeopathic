@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Homoeopathic Treatment - Natural Healing Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #2a7a5c;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: #c5e1d4;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42, 122, 92, 0.9), rgba(42, 122, 92, 0.8)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .stars {
+            color: #FFD700;
+            font-size: 1.5rem;
+        }
+        
+        .review-count {
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        /* Main Content Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2a7a5c;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: #2a7a5c;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            color: #2a7a5c;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item i {
+            color: #2a7a5c;
+            font-size: 1.5rem;
+            width: 30px;
+            margin-top: 5px;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            color: #2a7a5c;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .hours-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .hours-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #2a7a5c;
+            outline: none;
+        }
+        
+        .submit-btn {
+            background-color: #2a7a5c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1f5c46;
+        }
+        
+        /* Location Section */
+        .location-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .location-info {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .location-info h3 {
+            color: #2a7a5c;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .address {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .address i {
+            color: #2a7a5c;
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .map-placeholder {
+            height: 300px;
+            background-color: #e9f5f0;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #2a7a5c;
+            font-weight: 500;
+        }
+        
+        .map-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: "\201C";
+            font-size: 5rem;
+            color: #e9f5f0;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-family: serif;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e9f5f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            color: #2a7a5c;
+        }
+        
+        .author-info h4 {
+            color: #2a7a5c;
+            margin-bottom: 5px;
+        }
+        
+        .author-info .stars {
+            font-size: 1rem;
+        }
+        
+        /* Admin Section Styles */
+        .admin-section {
+            display: none;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+        .admin-header {
+            background-color: #1f5c46;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-header .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .admin-main {
+            padding: 2rem 0;
+        }
+        
+        .admin-login {
+            max-width: 400px;
+            margin: 5rem auto;
+            padding: 2.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-login h2 {
+            color: #2a7a5c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .admin-dashboard {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dashboard-header h2 {
+            color: #2a7a5c;
+        }
+        
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .messages-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .messages-table th {
+            background-color: #2a7a5c;
+            color: white;
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: 600;
+        }
+        
+        .messages-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .messages-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .messages-table tr:hover {
+            background-color: #f0f7f4;
+        }
+        
+        .no-messages {
+            text-align: center;
+            padding: 3rem;
+            color: #777;
+        }
+        
+        .message-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-new {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .status-read {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .message-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .mark-read-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .view-btn {
+            background-color: #2196f3;
+            color: white;
+        }
+        
+        .message-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-header h3 {
+            color: #2a7a5c;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .modal-details {
+            margin-top: 1.5rem;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            min-width: 120px;
+            color: #555;
+        }
+        
+        .detail-value {
+            flex: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: #2a7a5c;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #2a7a5c;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #2a7a5c;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .admin-access-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f0f7f4;
+            border-radius: 5px;
+            color: #2a7a5c;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .messages-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        .map-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2a7a5c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.directions-btn:hover {
+    background-color: #1f5c46;
+}
+
+.map-placeholder {
+    display: none; /* Hide the placeholder when map is embedded */
+}
+
+.map-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    min-height: 300px;
+}
+
+.map-actions {
+    text-align: center;
+}
+
+.directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2a7a5c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.directions-btn:hover {
+    background-color: #1f5c46;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 576px) {
+    .map-container {
+        padding: 15px;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+.phone-number {
+    font-size: 1.8rem;
+    color: #2a7a5c;
+    font-weight: 700;
+    margin: 10px 0;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.phone-number:hover {
+    color: #1f5c46;
+    transform: translateY(-2px);
+}
+
+/* For the footer phone link */
+.footer-links a[href^="tel:"] {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a[href^="tel:"]:hover {
+    color: #2a7a5c;
+}
+
+/* Make phone numbers clickable on all devices */
+a[href^="tel:"] {
+    cursor: pointer;
+}
+
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2a7a5c;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 122, 92, 0.3);
+}
+
+.call-button:hover {
+    background-color: #1f5c46;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(42, 122, 92, 0.4);
+    color: white;
+}
+
+.mobile-call-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2a7a5c;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .mobile-call-button {
+        display: flex;
+    }
+}
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #2a7a5c;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav a {
+                display: block;
+                padding: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-info, .contact-form, .location-info {
+                padding: 1.5rem;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .admin-login {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .admin-dashboard {
+                padding: 1rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+            .email-link {
+    color: #2a7a5c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+.email-link:hover {
+    color: #1f5c46;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+/* For the footer email link */
+.footer-links a[href^="mailto:"] {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+    word-break: break-word;
+}
+
+.footer-links a[href^="mailto:"]:hover {
+    color: #2a7a5c;
+}
+
+/* Make email links clickable */
+a[href^="mailto:"] {
+    cursor: pointer;
+}
+
+.email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2a7a5c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.email-button:hover {
+    background-color: #1f5c46;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(42, 122, 92, 0.3);
+}
+
+.mobile-contact-buttons {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-call-btn, .mobile-email-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mobile-call-btn {
+    background-color: #2a7a5c;
+}
+
+.mobile-email-btn {
+    background-color: #e74c3c;
+}
+
+.mobile-call-btn:hover, .mobile-email-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.mobile-call-btn i, .mobile-email-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+    .mobile-contact-buttons {
+        display: flex;
+    }
+    
+    /* Hide individual mobile call button if you added it earlier */
+    .mobile-call-button {
+        display: none;
+    }
+}
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Website Content -->
+    <div id="websiteContent">
+        <!-- Header & Navigation -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="logo-text">
+                            <h1>Sai Homoeopathic Treatment</h1>
+                            <p>Natural Healing Solutions</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <nav>
+                        <ul id="mainNav">
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#location">Location</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h2>Holistic Healing with Sai Homoeopathic Treatment</h2>
+                <p>With over 5,016 reviews and a legacy of trust, we provide natural, side-effect-free homeopathic treatments for chronic and acute conditions. Experience personalized care and holistic healing at our Paprola clinic.</p>
+                
+                <div class="rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="review-count">5,016 Reviews</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                </div>
+                
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Reach out to us for appointments, consultations, or any queries about homeopathic treatments.</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-details">
+                                <h4>Phone Number</h4>
+                                <a href="tel:+917005602518" class="phone-number">+91 7005602518</a>
+                                <p>Call us for appointments or teleconsultation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h4>Email Address</h4>
+                                <a href="mailto:saihomeopathytreatment@gmail.com" class="email-link">saihomeopathytreatment@gmail.com</a>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-details">
+                                <h4>Opening Hours</h4>
+                                <ul class="hours-list">
+                                    <li><span>Monday</span> <span>Closed</span></li>
+                                    <li><span>Tuesday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                    <li><span>Wednesday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                    <li><span>Thursday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                    <li><span>Friday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                    <li><span>Saturday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                    <li><span>Sunday</span> <span></span>9:00 AM - 8:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointment">Appointment For</label>
+                                <select id="appointment">
+                                    <option value="">Select an option</option>
+                                    <option value="consultation">New Consultation</option>
+                                    <option value="followup">Follow-up Visit</option>
+                                    <option value="teleconsultation">Teleconsultation</option>
+                                    <option value="medicine">Medicine Query</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+
+
+                        <!-- Add this before closing body tag, after the mobile call button -->
+                        
+
+                       </div>
+                    </div>
+                        <div class="contact-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="contact-details">
+                                <h4>Quick Contact</h4>
+                                <a href="mailto:saihomeopathytreatment@gmail.com?subject=Appointment%20Request&body=Hello,%20I%20would%20like%20to%20schedule%20an%20appointment." class="email-button">
+                                    <i class="fas fa-envelope"></i> Email for Appointment
+                                </a>
+                                <p style="margin-top: 10px; font-size: 0.9rem;">Pre-scheduled email with appointment request</p>
+                            </div>
+
+
+                            <div class="mobile-contact-buttons">
+                            <a href="tel:+917005602518" class="mobile-call-btn">
+                                <i class="fas fa-phone-alt"></i>
+                                <span></span>
+                            </a>
+                            <a href="mailto:saihomeopathytreatment@gmail.com" class="mobile-email-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span></span>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Location</h2>
+                </div>
+                
+                <div class="location-container">
+                    <div class="location-info">
+                        <h3>Visit Our Clinic</h3>
+                        <p>We are conveniently located in Paprola, Himachal Pradesh, easily accessible from surrounding areas.</p>
+                        
+                        <div class="address">
+                            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Sai Homoeopathic Treatment (Clinic), Khoo Bazar,Opposite Saraswati Vidya Mandir Paprola, Kasba Paprola, Himachal Pradesh 176115, India</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-directions"></i>
+                            <div class="contact-details">
+                                <h4>Directions</h4>
+                                <p>Located on Khoo Bazar, opposite Saraswati Vidya Mandir, near the main market area of Paprola. Ample parking available.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-bus"></i>
+                            <div class="contact-details">
+                                <h4>Transport</h4>
+                                <p>Well-connected by road. Local transport available from nearby towns and bus stand.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.215593821545!2d76.57909277601142!3d32.30443241048771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2a1773d12715%3A0x357aeb1579ea6d88!2sSai%20Homeopathic%20Treatment%20Clinic!5e0!3m2!1sen!2sin!4v1713945600000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-actions">
+                            <a href="https://maps.app.goo.gl/WcPV7SgwBZngHRFS9" target="_blank" class="directions-btn">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Patient Testimonials</h2>
+                </div>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>I had been suffering from chronic sinusitis for years. After visiting Sai Homoeopathic Treatment, I experienced significant improvement within just 2 months. The personalized approach and genuine care from the doctor made all the difference.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Rajesh Kumar</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Patient since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>My daughter's persistent allergies were not responding to conventional medicine. A friend recommended Sai Homoeopathic Treatment, and I'm so grateful. The treatment was gentle yet effective, and she's now allergy-free for the first time in years.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-female"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>Patient since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>After trying multiple treatments for my arthritis with little success, I decided to try homeopathy. The doctor at Sai Homoeopathic took time to understand my complete medical history. The treatment has reduced my pain significantly and improved my mobility.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Harish Patel</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Patient since 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Sai Homoeopathic Treatment</h3>
+                        <p>Providing natural, holistic homeopathic treatments with a legacy of trust and over 5,016 positive reviews from satisfied patients.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#location">Location</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Info</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-map-marker-alt"></i> Khoo Bazar, Opposite Saraswati Vidya Mandir, Paprola, HP 176115</li>
+                            <li>
+                                <a href="tel:+917005602518">
+                                    <i class="fas fa-phone-alt"></i> +91 7005602518
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:saihomeopathytreatment@gmail.com">
+                                    <i class="fas fa-envelope"></i> saihomeopathytreatment@gmail.com
+                                </a>
+                            </li>
+                            <li><i class="fas fa-clock"></i> Tue-Sun: 9:00 AM - 8:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2025 Sai Homoeopathic Treatment. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Section (Initially Hidden) -->
+    <div id="adminSection" class="admin-section">
+        <!-- Admin Login Page -->
+        <div id="adminLoginPage" class="admin-login-container">
+            <div class="admin-header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="logo-text">
+                                <h1>Sai Homoeopathic Admin</h1>
+                                <p>Message Management Portal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-main">
+                <div class="container">
+                    <div class="admin-login">
+                        <h2>Admin Login</h2>
+                        <form id="adminLoginForm">
+                            <div class="form-group">
+                                <label for="adminUsername">Username</label>
+                                <input type="text" id="adminUsername" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adminPassword">Password</label>
+                                <input type="password" id="adminPassword" required>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Login</button>
+                            <p style="margin-top: 1rem; text-align: center; font-size: 0.9rem; color: #666;">
+                                Default credentials: <strong>admin</strong> / <strong>admin123</strong>
+                            </p>
+                            <p style="margin-top: 1rem; text-align: center; font-size: 0.8rem; color: #888;">
+                                <a href="#" onclick="goToHomepage()" style="color: #2a7a5c;">← Back to main website</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Admin Dashboard (Initially Hidden) -->
+        <div id="adminDashboard" style="display: none;">
+            <div class="admin-header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="logo-text">
+                                <h1>Sai Homoeopathic Admin</h1>
+                                <p>Message Management Portal</p>
+                            </div>
+                        </div>
+                        <button id="logoutBtn" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-main">
+                <div class="container">
+                    <div class="admin-dashboard">
+                        <div class="dashboard-header">
+                            <h2>Contact Form Messages</h2>
+                            <div>
+                                <span id="messageCount">0 messages</span>
+                            </div>
+                        </div>
+                        
+                        <div id="messagesContainer">
+                            <!-- Messages will be loaded here -->
+                            <div class="no-messages">
+                                <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 1rem; color: #ccc;"></i>
+                                <h3>No messages yet</h3>
+                                <p>Contact form messages will appear here once submitted.</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem; text-align: center;">
+                            <a href="#" onclick="goToHomepage()" style="color: #2a7a5c; text-decoration: none;">
+                                <i class="fas fa-arrow-left"></i> Back to main website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Detail Modal -->
+    <div id="messageModal" class="message-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Message Details</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div id="modalBody">
+                <!-- Message details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==============================================
+        // ADMIN CREDENTIALS - GUARANTEED TO WORK
+        // ==============================================
+        // Username: admin
+        // Password: admin123
+        // ==============================================
+        
+        // Initialize messages in local storage if not exists
+        if (!localStorage.getItem('saiMessages')) {
+            // Add some sample messages for demo
+            const sampleMessages = [
+                {
+                    id: 1,
+                    name: "Rahul Verma",
+                    phone: "+91 9876543210",
+                    email: "rahul@example.com",
+                    appointmentType: "consultation",
+                    message: "I need an appointment for chronic migraine treatment. I've heard good things about your clinic.",
+                    date: "2023-10-15T14:30:00",
+                    status: "read"
+                },
+                {
+                    id: 2,
+                    name: "Sunita Reddy",
+                    phone: "+91 8765432109",
+                    email: "sunita@example.com",
+                    appointmentType: "followup",
+                    message: "Following up on my previous treatment for arthritis. The medication has helped significantly.",
+                    date: "2023-10-16T10:15:00",
+                    status: "new"
+                },
+                {
+                    id: 3,
+                    name: "Amit Patel",
+                    phone: "+91 7654321098",
+                    email: "amit@example.com",
+                    appointmentType: "teleconsultation",
+                    message: "I live in another city. Can we schedule a teleconsultation for my son's allergies?",
+                    date: "2023-10-17T16:45:00",
+                    status: "read"
+                }
+            ];
+            localStorage.setItem('saiMessages', JSON.stringify(sampleMessages));
+        }
+        
+        // DOM Elements
+        const websiteContent = document.getElementById('websiteContent');
+        const adminSection = document.getElementById('adminSection');
+        const adminLoginPage = document.getElementById('adminLoginPage');
+        const adminDashboard = document.getElementById('adminDashboard');
+        const adminLoginForm = document.getElementById('adminLoginForm');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const messagesContainer = document.getElementById('messagesContainer');
+        const messageCount = document.getElementById('messageCount');
+        const messageModal = document.getElementById('messageModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalBody = document.getElementById('modalBody');
+        
+        // Function to go back to homepage
+        window.goToHomepage = function() {
+            showWebsite();
+            window.history.pushState({}, '', '/');
+            return false;
+        };
+        
+        // Check current route on page load
+        function checkRoute() {
+            const path = window.location.pathname;
+            const fullPath = window.location.href;
+            
+            // Check if we're on the /admin route
+            if (path === '/admin' || fullPath.includes('/admin') || window.location.hash === '#admin') {
+                showAdminSection();
+            } else {
+                showWebsite();
+            }
+        }
+        
+        // Show main website
+        function showWebsite() {
+            websiteContent.style.display = 'block';
+            adminSection.style.display = 'none';
+            window.history.pushState({}, '', '/');
+            
+            // Update active nav link
+            updateActiveNavLink();
+        }
+        
+        // Show admin section
+        function showAdminSection() {
+            websiteContent.style.display = 'none';
+            adminSection.style.display = 'block';
+            
+            // Check if user is already logged in
+            const isLoggedIn = localStorage.getItem('adminLoggedIn') === 'true';
+            if (isLoggedIn) {
+                showAdminDashboard();
+            } else {
+                showAdminLogin();
+            }
+            
+            // Update URL to show /admin route
+            window.history.pushState({}, '', '/admin');
+        }
+        
+        // Show admin login page
+        function showAdminLogin() {
+            adminLoginPage.style.display = 'block';
+            adminDashboard.style.display = 'none';
+        }
+        
+        // Show admin dashboard
+        function showAdminDashboard() {
+            adminLoginPage.style.display = 'none';
+            adminDashboard.style.display = 'block';
+            loadMessages();
+        }
+        
+        // Load messages from localStorage
+        function loadMessages() {
+            const messages = JSON.parse(localStorage.getItem('saiMessages') || '[]');
+            
+            // Update message count
+            const newMessages = messages.filter(msg => msg.status === 'new').length;
+            messageCount.textContent = `${messages.length} messages (${newMessages} new)`;
+            
+            // Clear messages container
+            messagesContainer.innerHTML = '';
+            
+            if (messages.length === 0) {
+                messagesContainer.innerHTML = `
+                    <div class="no-messages">
+                        <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 1rem; color: #ccc;"></i>
+                        <h3>No messages yet</h3>
+                        <p>Contact form messages will appear here once submitted.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Sort messages by date (newest first)
+            messages.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            // Create messages table
+            const table = document.createElement('table');
+            table.className = 'messages-table';
+            
+            // Create table header
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="messagesTableBody">
+                </tbody>
+            `;
+            
+            messagesContainer.appendChild(table);
+            const tableBody = document.getElementById('messagesTableBody');
+            
+            // Add each message as a table row
+            messages.forEach(message => {
+                const row = document.createElement('tr');
+                const date = new Date(message.date);
+                const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                
+                row.innerHTML = `
+                    <td>${message.id}</td>
+                    <td>${message.name}</td>
+                    <td>${message.phone}</td>
+                    <td>${message.appointmentType}</td>
+                    <td>${formattedDate}</td>
+                    <td><span class="message-status status-${message.status}">${message.status}</span></td>
+                    <td>
+                        <div class="message-actions">
+                            <button class="action-btn view-btn" onclick="viewMessage(${message.id})">View</button>
+                            <button class="action-btn mark-read-btn" onclick="toggleMessageStatus(${message.id})">${message.status === 'new' ? 'Mark Read' : 'Mark New'}</button>
+                            <button class="action-btn delete-btn" onclick="deleteMessage(${message.id})">Delete</button>
+                        </div>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // View message details
+        window.viewMessage = function(messageId) {
+            const messages = JSON.parse(localStorage.getItem('saiMessages') || '[]');
+            const message = messages.find(msg => msg.id === messageId);
+            
+            if (!message) return;
+            
+            const date = new Date(message.date);
+            const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+            
+            modalBody.innerHTML = `
+                <div class="modal-details">
+                    <div class="detail-row">
+                        <div class="detail-label">Message ID:</div>
+                        <div class="detail-value">${message.id}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Date:</div>
+                        <div class="detail-value">${formattedDate}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Name:</div>
+                        <div class="detail-value">${message.name}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Phone:</div>
+                        <div class="detail-value">${message.phone}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Email:</div>
+                        <div class="detail-value">${message.email || 'Not provided'}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Appointment Type:</div>
+                        <div class="detail-value">${message.appointmentType}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Status:</div>
+                        <div class="detail-value"><span class="message-status status-${message.status}">${message.status}</span></div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Message:</div>
+                        <div class="detail-value">${message.message}</div>
+                    </div>
+                </div>
+            `;
+            
+            messageModal.style.display = 'flex';
+            
+            // Mark as read if it's new
+            if (message.status === 'new') {
+                toggleMessageStatus(messageId);
+            }
+        };
+        
+        // Toggle message status (new/read)
+        window.toggleMessageStatus = function(messageId) {
+            let messages = JSON.parse(localStorage.getItem('saiMessages') || '[]');
+            messages = messages.map(msg => {
+                if (msg.id === messageId) {
+                    msg.status = msg.status === 'new' ? 'read' : 'new';
+                }
+                return msg;
+            });
+            
+            localStorage.setItem('saiMessages', JSON.stringify(messages));
+            loadMessages();
+        };
+        
+        // Delete a message
+        window.deleteMessage = function(messageId) {
+            if (confirm('Are you sure you want to delete this message?')) {
+                let messages = JSON.parse(localStorage.getItem('saiMessages') || '[]');
+                messages = messages.filter(msg => msg.id !== messageId);
+                localStorage.setItem('saiMessages', JSON.stringify(messages));
+                loadMessages();
+            }
+        };
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            messageModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        messageModal.addEventListener('click', (e) => {
+            if (e.target === messageModal) {
+                messageModal.style.display = 'none';
+            }
+        });
+        
+        // ==============================================
+        // FIXED ADMIN LOGIN - GUARANTEED WORKING
+        // ==============================================
+        adminLoginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value;
+            
+            console.log('Login attempt:', {username, password});
+            
+            // DIRECT STRING COMPARISON - NO VARIABLES
+            if (username === "admin" && password === "admin123") {
+                console.log('Login successful!');
+                localStorage.setItem('adminLoggedIn', 'true');
+                showAdminDashboard();
+            } else {
+                alert('Invalid username or password.\n\nPlease use:\nUsername: admin\nPassword: admin123\n\nNote: Both are case-sensitive.');
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('adminUsername').focus();
+            }
+        });
+        // ==============================================
+        
+        // Logout button
+        logoutBtn.addEventListener('click', () => {
+            localStorage.setItem('adminLoggedIn', 'false');
+            showAdminLogin();
+            document.getElementById('adminLoginForm').reset();
+        });
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', checkRoute);
+        
+        // Form submission on main website
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const appointmentType = document.getElementById('appointment').value;
+                const message = document.getElementById('message').value;
+                
+                // Get existing messages
+                let messages = JSON.parse(localStorage.getItem('saiMessages') || '[]');
+                
+                // Create new message object
+                const newMessage = {
+                    id: messages.length > 0 ? Math.max(...messages.map(m => m.id)) + 1 : 1,
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    appointmentType: appointmentType,
+                    message: message,
+                    date: new Date().toISOString(),
+                    status: 'new'
+                };
+                
+                // Add to messages array
+                messages.push(newMessage);
+                
+                // Save to localStorage
+                localStorage.setItem('saiMessages', JSON.stringify(messages));
+                
+                // Show success message
+                alert(`Thank you ${name}! Your message has been sent. We will contact you at ${phone} shortly.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+                
+                // Close mobile menu if open
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Function to update active nav link based on scroll
+        function updateActiveNavLink() {
+            if (websiteContent.style.display === 'none') return;
+            
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Highlight active navigation based on scroll position
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Initialize the app
+        checkRoute();
+        
+        // Auto-fill demo credentials for testing (optional)
+        window.addEventListener('load', function() {
+           
+            // Uncomment below to auto-fill credentials for testing
+            // document.getElementById('adminUsername').value = 'admin';
+            // document.getElementById('adminPassword').value = 'admin123';
+            
+            // Add a hidden way to access admin for testing
+            // Double-click logo to go to admin
+            const logo = document.querySelector('.logo');
+            if (logo) {
+                logo.addEventListener('dblclick', function() {
+                    showAdminSection();
+                    window.history.pushState({}, '', '/admin');
+                });
+            }
+        });
+        
+        // Handle direct access to /admin
+        // If someone manually types /admin in URL, show admin section
+        window.addEventListener('load', checkRoute);
+    </script>
+</body>
+</html>
