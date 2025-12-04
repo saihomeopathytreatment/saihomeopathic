@@ -17,6 +17,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
+            overflow-x: hidden;
         }
         
         /* Header & Navigation */
@@ -26,7 +27,7 @@
             padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
@@ -166,12 +167,12 @@
             border-radius: 2px;
         }
         
-        /* Contact Section */
-        .contact-container {
+        /* Contact Section - Reorganized Layout */
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
         
         .contact-info {
@@ -211,6 +212,14 @@
             color: #2a7a5c;
             font-weight: 700;
             margin: 10px 0;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-number:hover {
+            color: #1f5c46;
+            transform: translateY(-2px);
         }
         
         .hours-list {
@@ -281,10 +290,15 @@
             background-color: #1f5c46;
         }
         
+        /* Quick Contact Section - Desktop (Hidden on desktop, shown on mobile) */
+        .quick-contact-desktop {
+            display: none; /* Hidden on all devices by default */
+        }
+        
         /* Location Section */
         .location-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
             margin-top: 3rem;
         }
@@ -314,21 +328,40 @@
             width: 20px;
         }
         
-        .map-placeholder {
-            height: 300px;
-            background-color: #e9f5f0;
+        .map-container {
+            background-color: white;
+            padding: 20px;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #2a7a5c;
-            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .map-placeholder i {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+        .map-container iframe {
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            min-height: 300px;
+            width: 100%;
+        }
+        
+        .map-actions {
+            text-align: center;
+        }
+        
+        .directions-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #2a7a5c;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .directions-btn:hover {
+            background-color: #1f5c46;
         }
         
         /* Testimonials Section */
@@ -389,6 +422,201 @@
         
         .author-info .stars {
             font-size: 1rem;
+        }
+        
+        /* Email and Phone Link Styling */
+        .email-link {
+            color: #2a7a5c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+            word-break: break-word;
+        }
+        
+        .email-link:hover {
+            color: #1f5c46;
+            text-decoration: underline;
+            transform: translateY(-1px);
+        }
+        
+        /* Mobile Quick Contact - Only visible on mobile */
+        .mobile-contact-buttons {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .mobile-call-btn, .mobile-email-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-call-btn {
+            background-color: #2a7a5c;
+        }
+        
+        .mobile-email-btn {
+            background-color: #e74c3c;
+        }
+        
+        .mobile-call-btn:hover, .mobile-email-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        
+        .mobile-call-btn i, .mobile-email-btn i {
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+        
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .about-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-content h3 {
+            color: #2a7a5c;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #f0f7f4;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-item i {
+            font-size: 2rem;
+            color: #2a7a5c;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: #2a7a5c;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #2a7a5c;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #2a7a5c;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 0.9rem;
         }
         
         /* Admin Section Styles */
@@ -606,97 +834,6 @@
             flex: 1;
         }
         
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-            color: #ddd;
-            padding: 3rem 0 1.5rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background-color: #2a7a5c;
-            bottom: 0;
-            left: 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #2a7a5c;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #333;
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .social-icons a:hover {
-            background-color: #2a7a5c;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #333;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-        
-        .admin-access-note {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #f0f7f4;
-            border-radius: 5px;
-            color: #2a7a5c;
-            font-size: 0.9rem;
-        }
-        
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h2 {
@@ -707,166 +844,22 @@
                 font-size: 2rem;
             }
             
+            .contact-grid,
+            .location-container,
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .messages-table {
                 display: block;
                 overflow-x: auto;
             }
         }
-        .map-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.map-container iframe {
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.directions-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2a7a5c;
-    color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.directions-btn:hover {
-    background-color: #1f5c46;
-}
-
-.map-placeholder {
-    display: none; /* Hide the placeholder when map is embedded */
-}
-
-.map-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.map-container iframe {
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    min-height: 300px;
-}
-
-.map-actions {
-    text-align: center;
-}
-
-.directions-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2a7a5c;
-    color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.directions-btn:hover {
-    background-color: #1f5c46;
-}
-
-/* For mobile responsiveness */
-@media (max-width: 576px) {
-    .map-container {
-        padding: 15px;
-    }
-    
-    .map-container iframe {
-        height: 250px;
-    }
-}
-
-.phone-number {
-    font-size: 1.8rem;
-    color: #2a7a5c;
-    font-weight: 700;
-    margin: 10px 0;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.phone-number:hover {
-    color: #1f5c46;
-    transform: translateY(-2px);
-}
-
-/* For the footer phone link */
-.footer-links a[href^="tel:"] {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a[href^="tel:"]:hover {
-    color: #2a7a5c;
-}
-
-/* Make phone numbers clickable on all devices */
-a[href^="tel:"] {
-    cursor: pointer;
-}
-
-.call-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2a7a5c;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(42, 122, 92, 0.3);
-}
-
-.call-button:hover {
-    background-color: #1f5c46;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(42, 122, 92, 0.4);
-    color: white;
-}
-
-.mobile-call-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #2a7a5c;
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-weight: 600;
-    z-index: 999;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    gap: 8px;
-}
-
-@media (max-width: 768px) {
-    .mobile-call-button {
-        display: flex;
-    }
-}
+        
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -910,6 +903,72 @@ a[href^="tel:"] {
                 padding: 3rem 0;
             }
             
+            /* Show mobile contact buttons on mobile */
+            .mobile-contact-buttons {
+                display: flex;
+            }
+            
+            /* Show quick contact on mobile */
+            .quick-contact-desktop {
+                display: block; /* Show on mobile */
+                margin-top: 2rem;
+                background-color: white;
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                text-align: center;
+            }
+            
+            .quick-contact-desktop h3 {
+                color: #2a7a5c;
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+            }
+            
+            .quick-contact-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quick-contact-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 25px;
+                border-radius: 5px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+            
+            .call-btn {
+                background-color: #2a7a5c;
+                color: white;
+            }
+            
+            .email-btn {
+                background-color: #e74c3c;
+                color: white;
+            }
+            
+            .quick-contact-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Adjust contact form and info padding */
+            .contact-info, .contact-form, .location-info, .about-content {
+                padding: 1.5rem;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
             .dashboard-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -930,12 +989,8 @@ a[href^="tel:"] {
                 font-size: 1rem;
             }
             
-            .contact-info, .contact-form, .location-info {
-                padding: 1.5rem;
-            }
-            
-            .logo-text h1 {
-                font-size: 1.5rem;
+            .map-container iframe {
+                height: 250px;
             }
             
             .admin-login {
@@ -950,115 +1005,6 @@ a[href^="tel:"] {
             .modal-content {
                 padding: 1.5rem;
             }
-            .email-link {
-    color: #2a7a5c;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: inline-block;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    word-break: break-word;
-}
-
-.email-link:hover {
-    color: #1f5c46;
-    text-decoration: underline;
-    transform: translateY(-1px);
-}
-
-/* For the footer email link */
-.footer-links a[href^="mailto:"] {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
-    word-break: break-word;
-}
-
-.footer-links a[href^="mailto:"]:hover {
-    color: #2a7a5c;
-}
-
-/* Make email links clickable */
-a[href^="mailto:"] {
-    cursor: pointer;
-}
-
-.email-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #2a7a5c;
-    color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-top: 5px;
-}
-
-.email-button:hover {
-    background-color: #1f5c46;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(42, 122, 92, 0.3);
-}
-
-.mobile-contact-buttons {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.mobile-call-btn, .mobile-email-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.mobile-call-btn {
-    background-color: #2a7a5c;
-}
-
-.mobile-email-btn {
-    background-color: #e74c3c;
-}
-
-.mobile-call-btn:hover, .mobile-email-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    color: white;
-}
-
-.mobile-call-btn i, .mobile-email-btn i {
-    font-size: 1.2rem;
-    margin-bottom: 3px;
-}
-
-@media (max-width: 768px) {
-    .mobile-contact-buttons {
-        display: flex;
-    }
-    
-    /* Hide individual mobile call button if you added it earlier */
-    .mobile-call-button {
-        display: none;
-    }
-}
         }
     </style>
 </head>
@@ -1113,6 +1059,61 @@ a[href^="mailto:"] {
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+                
+                <div class="about-container">
+                    <div class="about-content">
+                        <h3>Our Philosophy</h3>
+                        <p>At Sai Homoeopathic Treatment, we believe in treating the individual as a whole, not just the symptoms. Our approach combines traditional homeopathic principles with modern understanding of holistic health.</p>
+                        <p>With years of experience and thousands of satisfied patients, we've established ourselves as a trusted name in homeopathic care in the Paprola region and beyond.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <h4>Holistic Approach</h4>
+                                <p>Treating mind, body, and spirit as one</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-user-md"></i>
+                                <h4>Expert Care</h4>
+                                <p>Experienced homeopathic practitioners</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Natural Remedies</h4>
+                                <p>100% natural, side-effect-free treatments</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <h4>Personalized Plans</h4>
+                                <p>Customized treatment for each patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <h3>Our Services</h3>
+                        <p>We specialize in treating a wide range of conditions using classical homeopathy:</p>
+                        <ul style="list-style: none; margin-left: 1rem;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Chronic diseases (arthritis, diabetes, hypertension)</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Respiratory disorders (asthma, allergies, sinusitis)</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Skin conditions (eczema, psoriasis, acne)</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Digestive disorders</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Women's health issues</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Pediatric care</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2a7a5c; margin-right: 10px;"></i> Mental health and stress management</li>
+                        </ul>
+                        <p>We also provide teleconsultation services for patients who cannot visit our clinic in person.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
@@ -1120,8 +1121,7 @@ a[href^="mailto:"] {
                     <h2>Contact Us</h2>
                 </div>
                 
-                
-                <div class="contact-container">
+                <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Get in Touch</h3>
                         <p>Reach out to us for appointments, consultations, or any queries about homeopathic treatments.</p>
@@ -1155,7 +1155,7 @@ a[href^="mailto:"] {
                                     <li><span>Thursday</span> <span>9:00 AM - 8:00 PM</span></li>
                                     <li><span>Friday</span> <span>9:00 AM - 8:00 PM</span></li>
                                     <li><span>Saturday</span> <span>9:00 AM - 8:00 PM</span></li>
-                                    <li><span>Sunday</span> <span></span>9:00 AM - 8:00 PM</li>
+                                    <li><span>Sunday</span> <span>9:00 AM - 8:00 PM</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1198,34 +1198,21 @@ a[href^="mailto:"] {
                             
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>
-
-
-                        <!-- Add this before closing body tag, after the mobile call button -->
-                        
-
-                       </div>
                     </div>
-                        <div class="contact-item">
-                            <i class="fas fa-paper-plane"></i>
-                            <div class="contact-details">
-                                <h4>Quick Contact</h4>
-                                <a href="mailto:saihomeopathytreatment@gmail.com?subject=Appointment%20Request&body=Hello,%20I%20would%20like%20to%20schedule%20an%20appointment." class="email-button">
-                                    <i class="fas fa-envelope"></i> Email for Appointment
-                                </a>
-                                <p style="margin-top: 10px; font-size: 0.9rem;">Pre-scheduled email with appointment request</p>
-                            </div>
-
-
-                            <div class="mobile-contact-buttons">
-                            <a href="tel:+917005602518" class="mobile-call-btn">
-                                <i class="fas fa-phone-alt"></i>
-                                <span></span>
-                            </a>
-                            <a href="mailto:saihomeopathytreatment@gmail.com" class="mobile-email-btn">
-                                <i class="fas fa-envelope"></i>
-                                <span></span>
-                            </a>
-                        </div>
+                </div>
+                
+                <!-- Quick Contact Section (Hidden on desktop, shown only on mobile) -->
+                <div class="quick-contact-desktop">
+                    <h3>Quick Contact Options</h3>
+                    <p>For immediate assistance, use one of these quick contact methods:</p>
+                    <div class="quick-contact-buttons">
+                        <a href="tel:+917005602518" class="quick-contact-btn call-btn">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                        <a href="mailto:saihomeopathytreatment@gmail.com?subject=Appointment%20Request&body=Hello,%20I%20would%20like%20to%20schedule%20an%20appointment." class="quick-contact-btn email-btn">
+                            <i class="fas fa-envelope"></i> Email Now
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1243,7 +1230,7 @@ a[href^="mailto:"] {
                         <p>We are conveniently located in Paprola, Himachal Pradesh, easily accessible from surrounding areas.</p>
                         
                         <div class="address">
-                            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Sai Homoeopathic Treatment (Clinic), Khoo Bazar,Opposite Saraswati Vidya Mandir Paprola, Kasba Paprola, Himachal Pradesh 176115, India</p>
+                            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Sai Homoeopathic Treatment (Clinic), Khoo Bazar, Opposite Saraswati Vidya Mandir Paprola, Kasba Paprola, Himachal Pradesh 176115, India</p>
                         </div>
                         
                         <div class="contact-item">
@@ -1266,9 +1253,6 @@ a[href^="mailto:"] {
                     <div class="map-container">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.215593821545!2d76.57909277601142!3d32.30443241048771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2a1773d12715%3A0x357aeb1579ea6d88!2sSai%20Homeopathic%20Treatment%20Clinic!5e0!3m2!1sen!2sin!4v1713945600000!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0; border-radius: 10px;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
@@ -1359,6 +1343,18 @@ a[href^="mailto:"] {
                 </div>
             </div>
         </section>
+
+        <!-- Mobile Quick Contact Buttons (Only visible on mobile) -->
+        <div class="mobile-contact-buttons">
+            <a href="tel:+917005602518" class="mobile-call-btn">
+                <i class="fas fa-phone-alt"></i>
+                <span>Call</span>
+            </a>
+            <a href="mailto:saihomeopathytreatment@gmail.com" class="mobile-email-btn">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
 
         <!-- Footer -->
         <footer>
@@ -1575,6 +1571,9 @@ a[href^="mailto:"] {
         const messageModal = document.getElementById('messageModal');
         const closeModal = document.getElementById('closeModal');
         const modalBody = document.getElementById('modalBody');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const contactForm = document.getElementById('contactForm');
         
         // Function to go back to homepage
         window.goToHomepage = function() {
@@ -1837,7 +1836,6 @@ a[href^="mailto:"] {
         window.addEventListener('popstate', checkRoute);
         
         // Form submission on main website
-        const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -1879,9 +1877,6 @@ a[href^="mailto:"] {
         }
         
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        
         if (mobileMenuBtn && mainNav) {
             mobileMenuBtn.addEventListener('click', () => {
                 mainNav.classList.toggle('active');
@@ -1913,7 +1908,7 @@ a[href^="mailto:"] {
                 }
                 
                 // Close mobile menu if open
-                if (mainNav.classList.contains('active')) {
+                if (mainNav && mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 }
@@ -1933,7 +1928,7 @@ a[href^="mailto:"] {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                if (scrollY >= (sectionTop - 100)) {
+                if (window.scrollY >= (sectionTop - 100)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1954,11 +1949,6 @@ a[href^="mailto:"] {
         
         // Auto-fill demo credentials for testing (optional)
         window.addEventListener('load', function() {
-           
-            // Uncomment below to auto-fill credentials for testing
-            // document.getElementById('adminUsername').value = 'admin';
-            // document.getElementById('adminPassword').value = 'admin123';
-            
             // Add a hidden way to access admin for testing
             // Double-click logo to go to admin
             const logo = document.querySelector('.logo');
