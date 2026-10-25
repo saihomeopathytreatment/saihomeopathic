@@ -1,0 +1,27 @@
+{
+  "patients": [],
+  "messages": [],
+  "settings": {
+    "clinic_name": "Sai Homoeopathic Treatment",
+    "phone": "+91 7005602518",
+    "email": "saihomeopathytreatment@gmail.com",
+    "address": "Khoo Bazar, Opposite Saraswati Vidya Mandir Paprola, Kasba Paprola, Himachal Pradesh 176115",
+    "hours": {
+      "monday": "Closed",
+      "tuesday": "9:00 AM - 8:00 PM",
+      "wednesday": "9:00 AM - 8:00 PM",
+      "thursday": "9:00 AM - 8:00 PM",
+      "friday": "9:00 AM - 8:00 PM",
+      "saturday": "9:00 AM - 8:00 PM",
+      "sunday": "9:00 AM - 8:00 PM"
+    }
+  },
+  "next_patient_id": 10,
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ]
+}
